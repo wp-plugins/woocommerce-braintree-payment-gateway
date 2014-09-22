@@ -1,0 +1,74 @@
+/**
+ * All of the CSS for public-facing functionality
+ * for WooCommerce Braintree Payment Gateway
+ */
+#braintree-cc-form {
+	width: 100%;
+	margin: 0;
+	padding: 11px 12px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#braintree-cc-form label {
+	width: 100%;
+}
+
+#braintree-cc-form .form-row-first,
+#braintree-cc-form .form-row-last {
+	width: 48%;
+}
+
+#braintree-cc-form .form-row-first {
+	float: left;
+	margin-right: 4%;
+}
+
+#braintree-cc-form .form-row-last {
+	float: right;
+}
+
+.braintree-card-expiry {
+    *zoom: 1;
+}
+
+.braintree-card-expiry:before,
+.braintree-card-expiry:after {
+    display: table;
+    content: '';
+}
+
+.braintree-card-expiry:after {
+    clear: both;
+}
+
+#braintree-card-expiry-month,
+#braintree-card-expiry-year {
+	display: block;
+	width: 48% !important;
+}
+
+#braintree-card-expiry-month {
+	float: left;
+	margin-right: 4%;
+}
+
+#braintree-card-expiry-year {
+	float: right;
+	margin-right: 0;
+}
+
+/* ==========================================================================
+   Mobile styles.
+   ========================================================================== */
+@media (max-width: 800px) {
+
+	#braintree-cc-form .form-row {
+		float: none;
+		width: 100%;
+		margin-right: 0;
+		padding: 0;
+	}
+
+}
