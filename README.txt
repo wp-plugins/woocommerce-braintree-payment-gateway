@@ -74,8 +74,8 @@ No, It doesn't, but this functionality is in plan for the near future.
 
 == Screenshots ==
 
-1. Displays configuration page with options for the Plugin, corresponds to admin-page.jpg. 
-2. Displays frontend shop Checkout page Payment Form, corresponds to checkout-payment-form.jpg. 
+1. Displays configuration page with options for the Plugin. 
+2. Displays frontend shop Checkout page Payment Form. 
 
 == Changelog ==
 
