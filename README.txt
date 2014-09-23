@@ -14,7 +14,7 @@ WooCommerce Braintree Payment Gateway allows you to accept payments on your Wooc
 
 WooCommerce Braintree Payment Gateway allows you to accept payments on your Woocommerce store. It authorizes credit card payments and processes them securely with your merchant account.
 
-Plugin Functionality:
+= Plugin Functionality: =
 
 * Easy to install and configure
 * Compatible with WordPress/Woocommerce plugins
@@ -23,6 +23,8 @@ Plugin Functionality:
 * Automatic Payment Confirmation to update order transaction
 
 Checkout Payment Form is responsive, adapts nicely to all mobile screen sizes.
+
+This Plugin __does not__ support WooCommerce Subscriptions, but this functionality is in plan for the near future.
 
 == Installation ==
 
