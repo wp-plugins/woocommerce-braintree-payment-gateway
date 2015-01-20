@@ -4,7 +4,7 @@
  * Plugin Name:       WooCommerce Braintree Payment Gateway
  * Plugin URI:        http://www.leljak.com/woocommerce-braintree-payment-gateway/
  * Description:       Braintree Payment Gateway allows you to accept payments on your Woocommerce store. It authorizes credit card payments and processes them securely with your merchant account.
- * Version:           1.0.0
+ * Version:           1.1.0
  * Author:            Tomislav Leljak
  * Author URI:        http://www.leljak.com/
  * License:           GPL-2.0+
