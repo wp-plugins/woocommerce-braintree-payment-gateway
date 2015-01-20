@@ -108,7 +108,7 @@ function run_WC_braintree_payment_gateway() {
 			}
 
 			// PHP Version
-			if ( version_compare( phpversion(), '5.3', '<' ) ) {
+			if ( version_compare( phpversion(), '5.2.1', '<' ) ) {
 				echo '<div class="error"><p>' . sprintf( __( 'Braintree Error: Braintree requires PHP 5.2.1 and above. You are using version %s.', 'woocommerce' ), phpversion() ) . '</p></div>';
 			}
 

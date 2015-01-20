@@ -1,10 +1,10 @@
 === WooCommerce Braintree Payment Gateway ===
 Contributors: leljak
-Donate link: http://www.leljak.com/donate
+Donate link: http://www.leljak.com/buy-me-a-coffee/
 Tags: WooCommerce, Braintree, payment gateway, credit card
 Requires at least: 4.0
-Tested up to: 4.0
-Stable tag: 1.0.0
+Tested up to: 4.1
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -76,10 +76,14 @@ No, It doesn't, but this functionality is in plan for the near future.
 
 == Screenshots ==
 
-1. Displays configuration page with options for the Plugin. 
-2. Displays frontend shop Checkout page Payment Form. 
+1. Configuration page with options for the Plugin. 
+2. Frontend shop Checkout page Payment Form. 
 
 == Changelog ==
+
+= 1.1.0 =
+*   PHP version check changed from 5.3 to 5.2.1
+*	Updated Braintree PHP Client Library to version 2.35.2. Released December 17, 2014.
 
 = 1.0.0 =
 *   First release

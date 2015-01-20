@@ -64,34 +64,23 @@ abstract class Braintree
     {
         $this->_attributes[$key] = $value;
     }
-
-    /**
-     *
-     * @param string $className
-     * @param object $resultObj
-     * @return object returns the passed object if successful
-     * @throws Braintree_Exception_ValidationsFailed
-     */
-    public static function returnObjectOrThrowException($className, $resultObj)
-    {
-        $resultObjName = Braintree_Util::cleanClassName($className);
-        if ($resultObj->success) {
-            return $resultObj->$resultObjName;
-        } else {
-            throw new Braintree_Exception_ValidationsFailed();
-        }
-    }
 }
 require_once('Braintree/Modification.php');
 require_once('Braintree/Instance.php');
 
 require_once('Braintree/Address.php');
+require_once('Braintree/AddressGateway.php');
 require_once('Braintree/AddOn.php');
+require_once('Braintree/AddOnGateway.php');
+require_once('Braintree/ApplePayCard.php');
 require_once('Braintree/ClientToken.php');
+require_once('Braintree/ClientTokenGateway.php');
 require_once('Braintree/Collection.php');
 require_once('Braintree/Configuration.php');
 require_once('Braintree/CreditCard.php');
+require_once('Braintree/CreditCardGateway.php');
 require_once('Braintree/Customer.php');
+require_once('Braintree/CustomerGateway.php');
 require_once('Braintree/CustomerSearch.php');
 require_once('Braintree/DisbursementDetails.php');
 require_once('Braintree/Dispute.php');
@@ -99,12 +88,15 @@ require_once('Braintree/Dispute/TransactionDetails.php');
 require_once('Braintree/Descriptor.php');
 require_once('Braintree/Digest.php');
 require_once('Braintree/Discount.php');
+require_once('Braintree/DiscountGateway.php');
 require_once('Braintree/IsNode.php');
 require_once('Braintree/EqualityNode.php');
 require_once('Braintree/Exception.php');
+require_once('Braintree/Gateway.php');
 require_once('Braintree/Http.php');
 require_once('Braintree/KeyValueNode.php');
 require_once('Braintree/MerchantAccount.php');
+require_once('Braintree/MerchantAccountGateway.php');
 require_once('Braintree/MerchantAccount/BusinessDetails.php');
 require_once('Braintree/MerchantAccount/FundingDetails.php');
 require_once('Braintree/MerchantAccount/IndividualDetails.php');
@@ -113,17 +105,24 @@ require_once('Braintree/MultipleValueNode.php');
 require_once('Braintree/MultipleValueOrTextNode.php');
 require_once('Braintree/PartialMatchNode.php');
 require_once('Braintree/Plan.php');
+require_once('Braintree/PlanGateway.php');
 require_once('Braintree/RangeNode.php');
 require_once('Braintree/ResourceCollection.php');
+require_once('Braintree/RiskData.php');
 require_once('Braintree/SettlementBatchSummary.php');
+require_once('Braintree/SettlementBatchSummaryGateway.php');
 require_once('Braintree/SignatureService.php');
 require_once('Braintree/Subscription.php');
+require_once('Braintree/SubscriptionGateway.php');
 require_once('Braintree/SubscriptionSearch.php');
+require_once('Braintree/Subscription/StatusDetails.php');
 require_once('Braintree/TextNode.php');
 require_once('Braintree/Transaction.php');
+require_once('Braintree/TransactionGateway.php');
 require_once('Braintree/Disbursement.php');
 require_once('Braintree/TransactionSearch.php');
 require_once('Braintree/TransparentRedirect.php');
+require_once('Braintree/TransparentRedirectGateway.php');
 require_once('Braintree/Util.php');
 require_once('Braintree/Version.php');
 require_once('Braintree/Xml.php');
@@ -153,6 +152,7 @@ require_once('Braintree/Test/TransactionAmounts.php');
 require_once('Braintree/Test/VenmoSdk.php');
 require_once('Braintree/Test/Nonces.php');
 require_once('Braintree/Transaction/AddressDetails.php');
+require_once('Braintree/Transaction/ApplePayCardDetails.php');
 require_once('Braintree/Transaction/CreditCardDetails.php');
 require_once('Braintree/Transaction/PayPalDetails.php');
 require_once('Braintree/Transaction/CustomerDetails.php');
@@ -163,10 +163,14 @@ require_once('Braintree/WebhookTesting.php');
 require_once('Braintree/Xml/Generator.php');
 require_once('Braintree/Xml/Parser.php');
 require_once('Braintree/CreditCardVerification.php');
+require_once('Braintree/CreditCardVerificationGateway.php');
 require_once('Braintree/CreditCardVerificationSearch.php');
 require_once('Braintree/PartnerMerchant.php');
 require_once('Braintree/PayPalAccount.php');
+require_once('Braintree/PayPalAccountGateway.php');
 require_once('Braintree/PaymentMethod.php');
+require_once('Braintree/PaymentMethodGateway.php');
+require_once('Braintree/PaymentInstrumentType.php');
 require_once('Braintree/UnknownPaymentMethod.php');
 
 if (version_compare(PHP_VERSION, '5.2.1', '<')) {
